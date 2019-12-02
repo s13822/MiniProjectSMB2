@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.miniproject2smb">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <receiver android:name=".CustomBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.example.miniprojectsmb.intent.action.EVENT1" />
+            </intent-filter>
+        </receiver>
+        <service android:name=".BroadcastService">
+        </service>
+    </application>
+
+
+
+    <permission android:name="com.example.my_permissions.SIMPLE_PERMISSION"
+        android:permissionGroup="com.example.my_permissions"
+        android:label="my simple permission" />
+
+    <permission-group android:name="com.example.my_permissions"
+        android:label="my permission group" />
+
+    <uses-permission android:name="com.example.my_permissions.SIMPLE_PERMISSION" />
+
+</manifest>
